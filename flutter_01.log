@@ -1,0 +1,98 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine --start-paused -d emulator-5554 --devtools-server-address http://127.0.0.1:9100/ --target lib\main.dart
+
+## exception
+
+ProcessException: ProcessException: The paging file is too small for this operation to complete.
+
+  Command: C:\src\flutter\bin\cache\dart-sdk\bin\dart.exe --disable-dart-dev C:\src\flutter\bin\cache\dart-sdk\bin\snapshots\frontend_server.dart.snapshot --sdk-root C:\src\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --incremental --target=flutter --experimental-emit-debug-metadata -DFLUTTER_WEB_AUTO_DETECT=true -DFLUTTER_WEB_CANVASKIT_URL=https://www.gstatic.com/flutter-canvaskit/90fa3ae28fe6ddaee1af2c120f01e50201c1401b/ --output-dill C:\Users\imran\AppData\Local\Temp\flutter_tools.dd13467d\flutter_tool.9845081a\app.dill --packages "C:\Users\imran\OneDrive\Desktop\FRESH PROJECT\flutter_application_1\.dart_tool\package_config.json" -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --filesystem-scheme org-dartlang-root --initialize-from-dill build\08cc42a12d40126f9972e2438221aca3.cache.dill.track.dill --source file:///C:/Users/imran/OneDrive/Desktop/FRESH%20PROJECT/flutter_application_1/.dart_tool/flutter_build/dart_plugin_registrant.dart --source package:flutter/src/dart_plugin_registrant.dart -Dflutter.dart_plugin_registrant=file:///C:/Users/imran/OneDrive/Desktop/FRESH%20PROJECT/flutter_application_1/.dart_tool/flutter_build/dart_plugin_registrant.dart --verbosity=error --enable-experiment=alternative-invalidation-strategy
+
+```
+#0      _ProcessImpl._start (dart:io-patch/process_patch.dart:401:33)
+#1      Process.start (dart:io-patch/process_patch.dart:38:20)
+#2      LocalProcessManager.start (package:process/src/interface/local_process_manager.dart:42:22)
+#3      ErrorHandlingProcessManager.start.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:689:24)
+#4      _run (package:flutter_tools/src/base/error_handling_io.dart:559:20)
+#5      ErrorHandlingProcessManager.start (package:flutter_tools/src/base/error_handling_io.dart:688:12)
+#6      DefaultResidentCompiler._compile (package:flutter_tools/src/compile.dart:806:37)
+#7      DefaultResidentCompiler._recompile (package:flutter_tools/src/compile.dart:691:14)
+#8      _RecompileRequest._run (package:flutter_tools/src/compile.dart:395:16)
+#9      _CompilationRequest.run (package:flutter_tools/src/compile.dart:371:30)
+#10     DefaultResidentCompiler._handleCompilationRequest (package:flutter_tools/src/compile.dart:728:23)
+#11     _rootRunUnary (dart:async/zone.dart:1407:47)
+#12     _CustomZone.runUnary (dart:async/zone.dart:1308:19)
+#13     _CustomZone.runUnaryGuarded (dart:async/zone.dart:1217:7)
+#14     _BufferingStreamSubscription._sendData (dart:async/stream_impl.dart:339:11)
+#15     _DelayedData.perform (dart:async/stream_impl.dart:515:14)
+#16     _PendingEvents.handleNext (dart:async/stream_impl.dart:620:11)
+#17     _PendingEvents.schedule.<anonymous closure> (dart:async/stream_impl.dart:591:7)
+#18     _rootRun (dart:async/zone.dart:1391:47)
+#19     _CustomZone.run (dart:async/zone.dart:1301:19)
+#20     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#21     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#22     _rootRun (dart:async/zone.dart:1399:13)
+#23     _CustomZone.run (dart:async/zone.dart:1301:19)
+#24     _CustomZone.runGuarded (dart:async/zone.dart:1209:7)
+#25     _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1249:23)
+#26     _microtaskLoop (dart:async/schedule_microtask.dart:40:21)
+#27     _startMicrotaskLoop (dart:async/schedule_microtask.dart:49:5)
+#28     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:123:13)
+#29     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:190:5)
+```
+
+## flutter doctor
+
+```
+[!] Flutter (Channel stable, 3.10.2, on Microsoft Windows [Version 10.0.22621.1702], locale en-IN)
+    • Flutter version 3.10.2 on channel stable at C:\src\flutter
+    ! Warning: `dart` on your path resolves to C:\dart-sdk\bin\dart.exe, which is not inside your current Flutter SDK checkout at C:\src\flutter. Consider adding C:\src\flutter\bin to the front of your path.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 9cd3d0d9ff (3 weeks ago), 2023-05-23 20:57:28 -0700
+    • Engine revision 90fa3ae28f
+    • Dart version 3.0.2
+    • DevTools version 2.23.1
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+    • Android SDK at C:\Users\imran\AppData\Local\Android\Sdk
+    • Platform android-33, build-tools 33.0.2
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-9586694)
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2022 17.6.2)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.6.33723.286
+    • Windows 10 SDK version 10.0.22621.0
+
+[✓] Android Studio (version 2022.2)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.6+0-b2043.56-9586694)
+
+[✓] VS Code (version 1.79.1)
+    • VS Code at C:\Users\imran\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.66.0
+
+[✓] Connected device (4 available)
+    • Android SDK built for x86 (mobile) • emulator-5554 • android-x86    • Android 11 (API 30) (emulator)
+    • Windows (desktop)                  • windows       • windows-x64    • Microsoft Windows [Version 10.0.22621.1702]
+    • Chrome (web)                       • chrome        • web-javascript • Google Chrome 114.0.5735.133
+    • Edge (web)                         • edge          • web-javascript • Microsoft Edge 114.0.1823.43
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 2 categories.
+```
