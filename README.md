@@ -1,6 +1,8 @@
 # flutter_application_1
 
 A new Flutter project.
+This a fully functional frontend of a catalogue application where any user can buy products using his credentials after logging in .
+I have uploaded the complete demo  video (catalogue-appkication-demo)download it and cheeck it out . 
 
 ## Getting Started
 
